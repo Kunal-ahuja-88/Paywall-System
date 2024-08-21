@@ -7,16 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db-generate" : "bun x drizzle-kit generate",
-    "db-migrate" : "bun x drizzle-kit migrate",
-    "db-studio" : "bun x drizzle-kit studio"
+    "db-generate": "bun x drizzle-kit generate",
+    "db-migrate": "bun x drizzle-kit migrate",
+    "db-studio": "bun x drizzle-kit studio"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "^1.4.2",
+    "@hono/auth-js": "^1.0.10",
     "@neondatabase/serverless": "^0.9.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.33.0",
+    "hono": "^4.5.7",
     "lucide-react": "^0.429.0",
     "next": "14.2.5",
     "next-auth": "^5.0.0-beta.20",
