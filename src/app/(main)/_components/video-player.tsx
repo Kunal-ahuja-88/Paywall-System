@@ -25,10 +25,10 @@ export const VideoPlayer = () => {
         <div>
           Upgrade to premium to watch this video
           <Button
-            variant={"secondary"}
             onClick={() => {
               alert("Upgrade to premium")
             }}
+            className='w-full mt-4'
           >
             Upgrade
           </Button>

@@ -4,6 +4,7 @@ import {AuthConfig , initAuthConfig} from '@hono/auth-js'
 import authConfig from '@/auth.config'
 
 import userRoutes from "@/app/api/[[...route]]/user"
+import paymentsRoutes from "@/app/api/[[...route]]/payments"
 
 export const runtime = 'nodejs'
 
@@ -18,7 +19,7 @@ const app = new Hono().basePath('/api')
 
 app.use("*",initAuthConfig(getAuthConfig))
 
-const routes = app.route('/user',userRoutes)
+const routes = app.route('/user',userRoutes).route('/payments',paymentsRoutes)
 
 app.get('/hello', (c) => {
   return c.json({
