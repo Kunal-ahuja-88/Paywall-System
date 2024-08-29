@@ -24,6 +24,9 @@ const app = new Hono()
         if(!user.isPremium) {
             return c.json({isPremium : false})
         }
+        else {
+            return c.json({isPremium : true})
+        }
      }
 )
 
